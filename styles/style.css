@@ -13,4 +13,154 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" 400;
+  background-size: cover;
+  background-image: var(--background-image);
+  background-attachment: fixed;
+}
+
+.header {
+  padding-inline-start: var(--clamp-header-x);
+  padding-inline-end: var(--clamp-header-x);
+  padding-block-start: var(--clamp-header-y);
+  padding-block-end: var(--clamp-header-y);
+  font-family: var(--accent-font), fantasy;
+}
+
+.header__border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: 2px solid var(--black, rgb(0 0 0));
+  padding-block-start: var(--clamp-border-y-700);
+  padding-block-end: var(--clamp-border-y-700);
+  width: var(--clamp-width);
+  background-color: var(--white);
+  row-gap: 20px;
+}
+
+.header__title {
+  font-size: var(--clamp-title);
+}
+
+.header__subtitle {
+  font-size: var(--clamp-subtitle);
+  display: flex;
+  justify-content: center;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.content__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.card__content {
+  border: 2px solid var(--black, rgb(0 0 0));
+  width: var(--clamp-width);
+  background-color: var(--white);
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+  line-height: 21px;
+  padding: 24px;
+  font-size: 18px;
+}
+
+.card__title {
+  border: 2px solid var(--black, rgb(0 0 0));
+  padding: 3px 10px 4px 10px;
+  font-size: 18px;
+  width: var(--clamp-width);
+  font-variation-settings: "wght" 700;
+  background-color: var(--white);
+}
+
+.card__subtitle {
+  width: var(--clamp-card-subtitle);
+}
+
+.card__wrapper {
+  position: relative;
+  height: var(--clamp-height);
+  width: var(--clamp-width);
+}
+
+.card__label {
+  position: absolute;
+  opacity: 0.5;
+  top: 25px;
+  right: 27px;
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  line-height: 14px;
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 1px var(--white, rgb(255 255 255));
+  z-index: 1;
+}
+
+.card__image {
+  width: var(--clamp-width);
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+
+
+
+
+
+.like-icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+}
+
+.filter-invert {
+  filter: invert(25%);
+}
+
+.filter-grayscale {
+  filter: grayscale(50%);
+}
+
+.filter-saturate {
+  filter: saturate(0.7);
+}
+
+.filter-hue {
+  filter: hue-rotate(156deg);
+}
+
+.filter-brigthness {
+  filter: brightness(60%);
+}
+
+.filter-blur {
+  filter: blur(4px);
+}
+
+.filter-contrast-hue {
+  filter: contrast(50%) hue-rotate(200deg);
+}
+
+.filter-sepia {
+  filter: sepia(40%);
 }
