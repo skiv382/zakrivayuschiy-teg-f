@@ -80,12 +80,12 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: scale 0.3s ease-in 0.1s 1 forwards;
+  animation: scale 0.3s ease-in 0.1s 1;
   transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s 1 forwards;
+  animation: sparks 0.3s ease-in 0.3s 1;
 }
 
 .button:focus {
@@ -99,4 +99,11 @@
   position: absolute;
   background-color: var(--black, rgb(0, 0, 0));
   transform: scaleX(0);
+  transform-origin: left center;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  content: "";
+  transform: scaleX(1);
 }

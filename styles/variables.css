@@ -4,6 +4,8 @@
   --accent-font: "Press Start 2P";
   --black: rgb(0 0 0);
   --white: rgb(255 255 255);
+  --contur-heart-color: #000;
+  --fill-heart-color: #ff0000;
   --background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3 0 2px,
