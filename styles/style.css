@@ -25,10 +25,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-inline-start: var(--clamp-header-x);
-  padding-inline-end: var(--clamp-header-x);
-  padding-block-start: var(--clamp-header-y);
-  padding-block-end: var(--clamp-header-y);
+  padding-inline: var(--clamp-header-x);
+  padding-block: var(--clamp-header-y);
   font-family: var(--accent-font), fantasy;
 }
 
@@ -39,8 +37,7 @@
   align-items: center;
   text-transform: uppercase;
   border: 2px solid var(--black, rgb(0 0 0));
-  padding-block-start: var(--clamp-border-y-700);
-  padding-block-end: var(--clamp-border-y-700);
+  padding-block: var(--clamp-container-y-700);
   width: var(--clamp-width);
   background-color: var(--white);
   row-gap: 20px;
@@ -67,7 +64,8 @@
 .content__item {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__content {
@@ -216,10 +214,10 @@
 }
 
 .dialog__floppy {
-  height: 21px;
-  width: 21px;
   align-self: center;
   mix-blend-mode: difference;
+  height: 21px;
+  width: 21px;
 }
 
 .dialog__button {
@@ -270,15 +268,58 @@ body:has(dialog[open]) {
   background-color: rgb(0 0 0 / 75%);
 }
 
-.modal__floppy {
-  height: 39px;
-  width: 39px;
-}
-
 .modal__subtitle {
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 21px;
   width: 234px;
   text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+  .header__container {
+    padding-inline: var(--clamp-container-x-375);
+    padding-block: var(--clamp-container-y-375);
+  }
+
+  .card__label {
+    top: 23px;
+    right: 14px;
+  }
+
+  .dialog {
+    width: 375px;
+  }
+
+  .dialog__button {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 310px;
+    height: 84px;
+    padding: 8px;
+  }
+
+  .dialog__floppy {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal[open] {
+    min-width: 341px;
+    padding-inline: 42px;
+  }
+
+  .modal__content {
+    width: 257px;
+  }
+
+  .modal__subtitle {
+    width: 198px;
+  }
+
+  .modal__button {
+    width: 257px;
+    align-self: center;
+  }
 }
