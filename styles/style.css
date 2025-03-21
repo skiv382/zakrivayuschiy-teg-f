@@ -16,7 +16,7 @@
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" 400;
   background-size: cover;
-  background-image: var(--background-image);
+  background-image: var(--background-image, rgb(211 211 211));
   background-attachment: fixed;
 }
 
@@ -98,8 +98,8 @@
 
 .card__wrapper {
   position: relative;
-  height: var(--clamp-height);
-  width: var(--clamp-width);
+  block-size: var(--clamp-height);
+  inline-size: var(--clamp-width);
 }
 
 .card__label {
@@ -272,8 +272,16 @@ body:has(dialog[open]) {
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 21px;
-  width: 234px;
+  max-width: 234px;
   text-transform: uppercase;
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  width: 293px;
+  column-gap: 20px;
 }
 
 @media (width <= 375px) {
@@ -288,15 +296,16 @@ body:has(dialog[open]) {
   }
 
   .dialog {
-    width: 375px;
+    height: 195px;
+    width: 341px;
   }
 
   .dialog__button {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 310px;
-    height: 84px;
+    width: 257px;
+    height: 38px;
     padding: 8px;
   }
 

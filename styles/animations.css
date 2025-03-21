@@ -65,7 +65,6 @@
 .buttons__heart:focus-visible {
   outline: none;
   border: 2px solid var(--black, rgb(0 0 0));
-  height: 38px;
 }
 
 .like-icon.is-liked .core {
