@@ -213,13 +213,6 @@
   padding-top: 50px;
 }
 
-.dialog__floppy {
-  align-self: center;
-  mix-blend-mode: difference;
-  height: 21px;
-  width: 21px;
-}
-
 .dialog__button {
   display: flex;
   width: 339px;
@@ -230,6 +223,17 @@
   position: relative;
   justify-content: space-evenly;
   cursor: pointer;
+}
+
+.dialog__floppy {
+  height: 21px;
+  width: 21px;
+  align-self: center;
+}
+
+.dialog__button .dialog__floppy {
+  mix-blend-mode: difference;
+  filter: brightness(0) invert(1);
 }
 
 .dialog__subtitle {
@@ -302,14 +306,14 @@ body:has(dialog[open]) {
 
   .dialog__button {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    width: 257px;
-    height: 38px;
+    width: 306px;
+    min-height: 80px;
     padding: 8px;
   }
 
   .dialog__floppy {
+    justify-content: center;
     width: 28px;
     height: 28px;
   }
