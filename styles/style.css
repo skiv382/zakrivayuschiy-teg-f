@@ -160,7 +160,6 @@
   align-items: flex-end;
   padding-inline-end: 25px;
   padding-block-end: 25px;
-  column-gap: 6px;
 }
 
 .button {
@@ -217,18 +216,19 @@
   display: flex;
   width: 339px;
   height: 55px;
-  padding: 12px;
   border: 2px solid var(--black, rgb(0 0 0));
   background-color: var(--white, rgb(255 255 255));
   position: relative;
   justify-content: space-evenly;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .dialog__floppy {
   height: 21px;
   width: 21px;
   align-self: center;
+  flex-shrink: 0;
 }
 
 .dialog__button .dialog__floppy {
@@ -285,8 +285,15 @@ body:has(dialog[open]) {
   align-items: center;
   padding-bottom: 30px;
   width: 293px;
-  column-gap: 20px;
+  column-gap: 10px;
 }
+
+.modal__floppy {
+  height: 39px;
+  width: 39px;
+  flex-shrink: 0;
+}
+
 
 @media (width <= 375px) {
   .header__container {
