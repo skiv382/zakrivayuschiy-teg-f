@@ -285,7 +285,7 @@ body:has(dialog[open]) {
   align-items: center;
   padding-bottom: 30px;
   width: 293px;
-  column-gap: 10px;
+  column-gap: 20px;
 }
 
 .modal__floppy {
@@ -294,8 +294,7 @@ body:has(dialog[open]) {
   flex-shrink: 0;
 }
 
-
-@media (width <= 375px) {
+@media (width < 376px) {
   .header__container {
     padding-inline: var(--clamp-container-x-375);
     padding-block: var(--clamp-container-y-375);
